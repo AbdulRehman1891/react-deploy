@@ -1,13 +1,128 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.heading {
+
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main-div {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -2rem;
+}
+
+.center {
+  width: 40%;
+  height: 70vh;
+  background-color: transparent;
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+
+}
+
+.center h1 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 50px;
+  margin-bottom: 30px;
+  min-width: 64px;
+  box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.center input {
+  margin: 1rem 1rem;
+  width: 60%;
+}
+
+.twoFields {
+  width: 60%;
+
+}
+
+.username {
+  width: 60%;
+  padding-left: -5px;
+}
+
+.center button {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  background-color: purple;
+  border-radius: 0.5rem;
+  border-color: white;
+  color: white;
+  margin-top: 2rem;
+  height: 3rem;
+  width: 20%;
+}
+
+.center button:hover {
+  background-color: transparent;
+  color: crimson;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.viewtable {
+  margin-top: 4rem;
+}
+
+.navbar {
+  width: 100%;
+  height: 6rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  /* padding: auto 10rem; */
+  display: grid;
+  grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
+}
+
+.navbar-brand {
+  display: grid;
+  grid-column: 2/3;
+  /* background-color: antiquewhite; */
+  justify-content: start;
+  align-items: center;
+}
+
+.navbar-brand h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-brand span {
+  font-size: 3.5rem;
+}
+
+.nav-item {
+  margin-left: 5rem;
+  font-size: 1.8rem;
+
+}
+
+.navbar-nav {
+  height: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.nav-item:hover {
+  transform-origin: left;
+  color: rgba(0, 0, 3, 1);
+  text-decoration: underline;
+  transition: 0.5s;
 }

@@ -1,38 +1,96 @@
-/**
- * This is a basic starting point of the assignment
- * Modify the code according to your own needs and requirements
- */
+const express = require("express"); 
 
-//const express = require('express')
-import express from 'express'; // <-- Module Style import
-import bodyParser from 'body-parser';
+const cors = require("cors"); 
 
-// Importing user route
-import router from './routes/users.js';
-// const router = require('router')
-
-// const bodyParser = require('body-parser')
+const customerMOdel = require("./Customer"); 
 
 const app = express()
-const port = 3001
 
-app.use(bodyParser.json())
-// Adding a Router
-app.use('/users', router);
+const mongoose = require("mongoose"); 
 
-app.get('/', (req, res) => {
-    res.send('Hello Universe!')
+// mongoose.connect("mongodb+srv://mirzasheraz:mirza123@cluster0.tryltpz.mongodb.net/assignment-01?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://AR:waqas@cluster0.x5zfxfd.mongodb.net/assignment-01?retryWrites=true&w=majority");
+app.use(cors())
+app.use(express.json()); 
+
+app.listen(3003, () => {
+
+    console.log("server runs perfectly"); 
 })
 
-app.get('/todos', (req, res) => {
-    res.send('A list of todo items will be returned')
+app.post("/AddCustomer", async(req, res)=>{
+
+
+    try{
+        const customer = req.body;
+        const addNew = new customerMOdel(customer);
+        await addNew.save(); 
+        res.json(customer);  
+    }catch(err){
+        console.log(err); 
+    }
 })
 
-app.post('/', (req, res) => {
-    console.log(req.body)
-    res.send('Posting a Request')
+app.get("/GetCustomer",(req, res)=>
+{
+
+    customerMOdel.find({},(err,result)=>{
+
+        if(err){
+            res.json(err); 
+        }
+        else{
+            res.json(result); 
+        }
+    })
 })
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+app.put("/UpdateCustomer/:id",async(req,res)=>{
+    try {
+        const _id = req.params.id;
+        const result = await customerMOdel.findByIdAndUpdate(_id,req.body,{new: true});
+        console.log(result)
+        if (!result) {
+            res.json({
+                status: "FAILED",
+                message: "Records not Update....",
+                data: result
+            })
+        }
+        else {
+            res.json({
+                status: "SUCCESS",
+                message: "Record is Updated successfully...",
+                data: result
+            })
+        }
+    }
+    catch (e) {
+        res.send(e)
+    }
+    
 })
+
+app.delete("/DeleteCustomer/:id",async(req,res)=>{
+    try{
+        const _id=req.params.id;
+        const result=await customerMOdel.findByIdAndDelete(_id);
+        if(result)
+        {
+            res.json({
+                status: "SUCCESS",
+                message: "Record Deleted..."
+            })
+        }
+        else{
+            res.json({
+                status: "Failed",
+                message: "Record Not Deleted..."
+            })
+        }
+    }
+    catch(e){
+        res.send(e)
+    }
+})
+
