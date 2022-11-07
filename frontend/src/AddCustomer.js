@@ -36,6 +36,7 @@ const AddCustomer=()=>
         <div className="center">
         <br/>
           <br/>
+          <h2>Sign Up</h2>
           <input  type="text" placeholder="Customer Name" onChange={(event)=>{setCustomername(event.target.value)}} ></input>
           <br/>
           <input  type="text" placeholder="Email"  onChange={(event)=>{setemail(event.target.value)}}></input>
@@ -47,7 +48,7 @@ const AddCustomer=()=>
          
           <input className="twoFields"  type="text" placeholder="PhoneNumber" onChange={(event)=>{setphonenumber(event.target.value)}} ></input>
           <br/>
-          <input className="twoFields"  type="text" placeholder="Password" onChange={(event)=>{setpassword(event.target.value)}} ></input>
+          <input className="twoFields"  type="password" placeholder="Password" onChange={(event)=>{setpassword(event.target.value)}} ></input>
           <br/>
           <button type="button" onClick={addcustomer}> Add </button>
           </div>

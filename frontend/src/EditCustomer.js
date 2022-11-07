@@ -137,7 +137,7 @@ const EditCustomer=()=>{
      backdrop="static"
      keyboard={false}>
       <div className="modal-header" >
-        <h5 className="modal-title">Seller Data</h5>
+        <h5 className="modal-title">Customer Data</h5>
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={handleViewClose}> </button>
       </div>
       <div className="modal-body">
@@ -161,7 +161,7 @@ const EditCustomer=()=>{
                     </div>
                     {
                       Delete &&(
-                        <Button type="submit" className="btn btn-danger mt-4" onClick={handleDelete}>Delete Seller</Button>
+                        <Button type="submit" className="btn btn-danger mt-4" onClick={handleDelete}>Delete Customer</Button>
                       )
                     }
       </div>
@@ -177,25 +177,25 @@ const EditCustomer=()=>{
      backdrop="static"
      keyboard={false}>
       <div className="modal-header" >
-        <h5 className="modal-title">Edit Seller</h5>
+        <h5 className="modal-title">Edit Customer</h5>
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={handleViewEditClose}> </button>
       </div>
       <div className="modal-body">
                     <div className="form-group">
-                    <label>shop_name</label>
-                    <input type="text" className="form-control" placeholder="Shop Name" onChange={(event)=>{setCustomername(event.target.value)}}    defaultValue={RowData.Customername}/>
+                    <label>customer_name</label>
+                    <input type="text" className="form-control" placeholder="Customer Name" onChange={(event)=>{setCustomername(event.target.value)}}    defaultValue={RowData.Customername}/>
                     </div>
                     <div className="form-group mt-3">
-                    <label>shop_owner</label>
-                    <input type="text" className="form-control" placeholder="Shop Owner"  onChange={(event)=>{setemail(event.target.value)}}  defaultValue={RowData.email}/>
+                    <label>email</label>
+                    <input type="text" className="form-control" placeholder="email"  onChange={(event)=>{setemail(event.target.value)}}  defaultValue={RowData.email}/>
                     </div>
                     <div className="form-group mt-3">
-                    <label>niche</label>
-                    <input type="text" className="form-control"  placeholder="Niche" onChange={(event)=>{setgender(event.target.value)}}    defaultValue={RowData.gender}/>
+                    <label>gender</label>
+                    <input type="text" className="form-control"  placeholder="gender" onChange={(event)=>{setgender(event.target.value)}}    defaultValue={RowData.gender}/>
                     </div>
                     <div className="form-group mt-3">
-                    <label>address</label>
-                    <input type="text" className="form-control" placeholder="Address" onChange={(event)=>{setDOB(event.target.value)}}  defaultValue={RowData.DOB}/>
+                    <label>DOB</label>
+                    <input type="text" className="form-control" placeholder="DOB" onChange={(event)=>{setDOB(event.target.value)}}  defaultValue={RowData.DOB}/>
                     </div>
                     <div className="form-group mt-3">
                     <label>phonenumber</label>
@@ -205,7 +205,7 @@ const EditCustomer=()=>{
                     <label>password</label>
                     <input type="text" className="form-control"  placeholder="Password" onChange={(event)=>{setpassword(event.target.value)}}  defaultValue={RowData.password}/>
                     </div>
-                    <Button type="submit" className="btn btn-warning mt-4" onClick={handleEdit}>Update Seller</Button>
+                    <Button type="submit" className="btn btn-warning mt-4" onClick={handleEdit}>Update Customer</Button>
       </div>
       <div className="modal-footer">
         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={handleViewEditClose}>Close</button>
