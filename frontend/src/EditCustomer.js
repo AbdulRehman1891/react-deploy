@@ -91,7 +91,7 @@ const EditCustomer=()=>{
         }
       
     return(
-        <div>
+        <div >
            <div className="viewtable">
            <table class="table table-scriptred table-hover table-bordered">
   <thead>

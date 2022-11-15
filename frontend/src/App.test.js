@@ -1,8 +1,24 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import { MemoryRouter, Route } from 'react-router-dom';
+import Navbar from './Navbar';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('Navbar Test', () => {
+  render(
+    <MemoryRouter>
+  <Navbar/>
+  </MemoryRouter>
+);
+  const linkElement = screen.getByTestId("comp");
+  expect(linkElement).toBeInTheDocument("AddCustomer");
 });
+
+test('Navbar Test', () => {
+  render(
+    <MemoryRouter>
+  <Navbar/>
+  </MemoryRouter>
+);
+  const linkElement = screen.getByTestId("comp");
+  expect(linkElement).toBeInTheDocument("ViewCustomer");
+});
+

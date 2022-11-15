@@ -5,7 +5,7 @@ const Navbar=()=>
 {
     return(
         <>
-        <div className="container-fluid nav-bg">
+        <div data-testid="comp" className="container-fluid nav-bg">
         
             <div className="row">
                 <div className="col-10 mx-auto">
@@ -22,8 +22,8 @@ const Navbar=()=>
         <li className="nav-item">
           <NavLink className="nav-link" to="/add">AddCustomer</NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/edit">ViewCustomer</NavLink>
+        <li  className="nav-item">
+          <NavLink  className="nav-link" to="/edit">ViewCustomer</NavLink>
         </li>
        </ul>
      
