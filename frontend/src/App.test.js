@@ -18,25 +18,6 @@ const dummyCustomer = [
   }
 ];
 
-const EditCustomer = [
-  {
-    Customername: "aa",
-    email: "abc@",
-    gender: "m",
-    DOB: "12/11/2000",
-    PhoneNo: "87545678",
-    password:"1234"
-  },
-  {
-    Customername: "abdullah",
-    email: "abdullah@gmail.com",
-    gender: "m",
-    DOB: "12/11/2010",
-    PhoneNo: "87545678",
-    password:"876"
-  }
-];
-
 test('Navbar Test', () => {
   render(
     <MemoryRouter>
