@@ -1,8 +1,21 @@
 import React from "react";
 import './index.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react"
 import axios from "axios";
+
+jest.mock("axios");
+
+const dummyCustomer = [
+  {
+    Customername: "aa",
+    email: "abc@",
+    gender: "m",
+    DOB: "12/11/2000",
+    PhoneNo: "87545678",
+    password:"1234"
+    
+  }
+];
 
 const AddCustomer=()=>
 {
@@ -32,7 +45,7 @@ const AddCustomer=()=>
 
     return(
        <>
-        <div data-testid="Add" className="main-div">
+        <div data-testid="add" className="main-div">
         <div className="center">
         <br/>
           <br/>

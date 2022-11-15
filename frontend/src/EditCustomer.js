@@ -1,9 +1,8 @@
 import  { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import axios from "axios";
 import './index.css';
-
+import axios from "axios";
 
 const EditCustomer=()=>{
 
@@ -92,7 +91,7 @@ const EditCustomer=()=>{
       
     return(
         <div >
-           <div className="viewtable">
+           <div data-testid="edit" className="viewtable">
            <table class="table table-scriptred table-hover table-bordered">
   <thead>
     <tr>
