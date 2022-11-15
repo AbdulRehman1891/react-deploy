@@ -5,7 +5,7 @@ const Navbar=()=>
 {
     return(
         <>
-        <div className="container-fluid nav-bg">
+        <div data-testid="comp" className="container-fluid nav-bg">
         
             <div className="row">
                 <div className="col-10 mx-auto">

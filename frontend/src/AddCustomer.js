@@ -1,6 +1,5 @@
 import React from "react";
 import './index.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react"
 import axios from "axios";
 
@@ -32,7 +31,7 @@ const AddCustomer=()=>
 
     return(
        <>
-        <div className="main-div">
+        <div data-testid="add" className="main-div">
         <div className="center">
         <br/>
           <br/>
