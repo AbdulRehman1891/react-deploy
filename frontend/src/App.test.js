@@ -12,7 +12,9 @@ test('Navbar Test', () => {
   expect(linkElement).toBeInTheDocument("AddCustomer");
 });
 
-test('Navbar Test', () => {
+
+
+test('Navbar Test2', () => {
   render(
     <MemoryRouter>
   <Navbar/>
@@ -20,5 +22,25 @@ test('Navbar Test', () => {
 );
   const linkElement = screen.getByTestId("comp");
   expect(linkElement).toBeInTheDocument("ViewCustomer");
+});
+
+test('Navbar Test3', () => {
+  render(
+    <MemoryRouter>
+  <Navbar/>
+  </MemoryRouter>
+);
+  const linkElement = screen.getByTestId("comp");
+  expect(linkElement).toBeInTheDocument("Commerce");
+});
+
+test('Navbar Test4', () => {
+  render(
+    <MemoryRouter>
+  <Navbar/>
+  </MemoryRouter>
+);
+  const linkElement = screen.getByTestId("comp");
+  expect(linkElement).toBeInTheDocument("E-");
 });
 

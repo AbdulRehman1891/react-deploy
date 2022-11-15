@@ -32,7 +32,7 @@ const AddCustomer=()=>
 
     return(
        <>
-        <div className="main-div">
+        <div data-testid="Add" className="main-div">
         <div className="center">
         <br/>
           <br/>
